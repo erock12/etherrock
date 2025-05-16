@@ -1,0 +1,128 @@
+
+
+<!--[if IE]>
+<meta http-equiv="refresh" content="0; url=http://example.com/" />
+<![endif]-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ether Rock</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <script src="./app9.js"></script>
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <div class="overlay-content">
+
+        <div id="userInfo"></div>
+
+        <br>
+        
+        <p><b>NEW:</b> <a href="https://etherrock.com/wrapper.html" target="_blank">Wrap your rock at the wrapper interface here</a>. Visit that page for more information.</p>
+        
+        <h4>Sell Rock</h4>
+
+        <div class="form-group">
+            <textarea class="form-control" rows="1" id="sellrockid" placeholder="Rock ID" style="overflow:auto"></textarea>
+        </div>
+
+        <div class="form-group">
+            <textarea class="form-control" rows="1" id="sellrockprice" placeholder="Price of rock in ETH - can enter decimals (eg. 0.0123)" style="overflow:auto"></textarea>
+        </div>
+
+        <div id="changesell"><a href="#!" onclick="sell()" button id="sellbutton" class="btn btn-primary btn-block">Sell Rock</a></div>
+
+        <br>
+
+        <h4>Transfer Rock</h4>
+
+        <div class="form-group">
+            <textarea class="form-control" rows="1" id="transferrockid" placeholder="Rock ID" style="overflow:auto"></textarea>
+        </div>
+
+        <div class="form-group">
+            <textarea class="form-control" rows="1" id="transferrockaccount" placeholder="Ethereum address to transfer rock to" style="overflow:auto"></textarea>
+        </div>
+
+        <div id="changetransfer"><a href="#!" onclick="transfer()" button id="transferbutton" class="btn btn-primary btn-block">Transfer Rock</a></div>
+
+        <br>
+
+        <h4>Take Rock Off The Market</h4>
+
+        <div class="form-group">
+            <textarea class="form-control" rows="1" id="keeprockid" placeholder="Rock ID" style="overflow:auto"></textarea>
+        </div>
+
+        <div id="changegift"><a href="#!" onclick="remove()" button id="keeprockbutton" class="btn btn-primary btn-block">Take Rock Off The Market</a></div>
+
+        <br>
+
+        <a href="javascript:void(0)" onclick="closeNav()">[Return To Website]</a>
+
+    </div>
+</div>
+
+
+<div id="particles-js">
+
+    <div id="maintable">
+
+        <h3>Ether Rock - Pet Rocks On The Blockchain</h3>
+
+        <br>
+
+            <p>Launched in 2017, EtherRock was one of the first crypto collectible NFT-type projects on the Ethereum blockchain, having launched shortly after CryptoPunks. Only 100 rocks can ever be available. EtherRock is built entirely on the Ethereum blockchain, with a <i>decentralized</i> smart contract (deployed <a href="https://etherscan.io/address/0x41f28833be34e6ede3c58d1f597bef429861c4e2" target="_blank">here</a>) used to manage everything including the buying and selling of rocks, their prices and owners (though this website is still necessary so you can see pretty pictures of the rocks).</p>
+
+            <p>These virtual rocks serve NO PURPOSE beyond being able to be brought and sold, and giving you a strong sense of pride in being an owner of 1 of the only 100 collectible rocks :)</p>
+
+        <div id="maininfotext">
+
+            <p><span style="background-color: yellow"><b>How to play</b></span>: you must be connected to the Ethereum mainnet to view info on rocks, and some Ether (the currency of Ethereum) to buy a rock. The easiest way to connect to the Ethereum mainnet is to use the <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en" target="_blank">MetaMask plugin for Chrome</a> -- go ahead and install it (takes 1 minute), then refresh this page. To get Ether you will need to buy some from an exchange like Coinbase.</p>
+
+        </div>
+
+        <p><b>Own a rock? <a href="#" onclick="openNav()">Go to the rock management console allowing you to sell, hold or transfer your rock.</a></b></p>
+
+        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f297869a9780809d9199919d9fb2959f939b9edc919d9f">[email&#160;protected]</a> | <a href="https://discord.gg/cuzYmchbQx" target="_blank">Discord</a> | <a href="https://twitter.com/etherrockcom" target="_blank">Twitter</a> | </a><a href="https://twitter.com/etherrock" target="_blank">Latest rock prices</a> | <a href="https://nftsprites.com" target="_blank">NFT Sprites</a>
+        
+        <!--https://docs.metamask.io/guide/getting-started.html-->
+        <div id="connectbutton"></div>
+
+        <h4>Latest Virgin Rock [Never Before Sold]</h4>
+
+        <!--<div id="virginrockinfo"></div>-->
+        <b>All 100 rocks have been sold</b>. You can purchase non-virgin rocks below, if they have been listed for sale by their owners.
+
+        <br>
+
+
+        <br>
+
+        <h4>All Active (USED) Rocks</h4>
+
+        <br>
+
+        <div id="usedrockinfo"><p>Once you connect to the Ethereum mainnet, information on all the rocks Ethereum users have brought would be shown below. Any rocks that users have listed for sale could also be brought here.</p></div>
+
+        <br>
+
+    </div>
+
+</div>
+
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="../particles.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
