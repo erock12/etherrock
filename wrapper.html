@@ -1,0 +1,75 @@
+<!--[if IE]>
+<meta http-equiv="refresh" content="0; url=http://example.com/" />
+<![endif]-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ether Rock - Wrapper</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="./wrapper.js"></script>
+</head>
+<body>
+
+<div id="particles-js">
+
+    <div id="maintable">
+
+        <h3>Ether Rock Wrapper</h3>
+
+        <br>
+
+            <p>If you own a rock, you can use this page to wrap it so it can be sold on Opensea and other marketplaces. Wrapping your rock means it gets turned into an ERC721 token which these marketplaces require. To wrap your rock, you have to transfer it to the wrapper contract (after the wrapper contract knows you're the owner of the rock), and any subsequent trading of the rock on marketplaces like Opensea will be done through this wrapper contract. At any time you can unwrap your rock and have the wrapper contract send it back to you so you'll be recorded as the owner in the Ether Rock contract again (unless someone buys it from you on Opensea, after which only they will be able to unwrap it).</p>
+
+            <p>Here are the 3 steps for wrapping a rock:</p>
+
+            <ol>
+                <li>Make sure the wrapper contract knows you are listed as the current owner of the rock ID you want to wrap (it probably already does). This page will check if this is the case when you enter a rock ID below, but you can also manually check yourself by going to the <a href="https://etherscan.io/address/0xa3f5998047579334607c47a6a2889bf87a17fc02#readContract" target="_blank">wrapper contract page on Etherscan</a> and entering your rock ID in the '2. checkIfUpdateRequired' section (should return false) and the '3. checkOwnerRecord' section (should return your Ethereum address).</li>
+                <li>Send your rock to the wrapper contract through the Ether Rock contract. This involves calling the giftRock() function in the Ether Rock contract. You can double check that the transaction is interacting with the Ether Rock contract, it's calling giftRock(), and it is sending your rock to the wrapper contract. If you're using MetaMask, your transaction details should be the same as the red highlights in <a href="giftrockexample.jpg" target="_blank">this image</a>.</li>
+                <li>Call the wrap() function in the wrapper contract to have your rock ID wrapped.</li>
+            </ol>
+            
+            <p>The Ether Rock contract address is <a href="https://etherscan.io/address/0x41f28833be34e6ede3c58d1f597bef429861c4e2" target="_blank">0x41f28833be34e6ede3c58d1f597bef429861c4e2</a> and the wrapper contract address is <a href="https://etherscan.io/address/0xa3f5998047579334607c47a6a2889bf87a17fc02" target="_blank">0xa3f5998047579334607c47a6a2889bf87a17fc02</a>.</p>
+            
+            <p><b>Enter your rock ID below to get started.</b></p>
+
+        <center>
+        <div id="maininfotext">
+            <p><span style="background-color: yellow"><b>Status</b></span>: You are not connected to the Ethereum mainnet. Make sure you're using something like MetaMask and are connected to the Ethereum mainnet, then refresh this page.</p>
+        </div>
+        <div id="connectbutton"></div>
+        </center>
+
+        <hr>
+        
+        <!--
+        <div id="warning"><p>NB: While the wrapper contract has been reviewed by several solidity developers and has had an <a href="https://immunefi.com/bounty/etherrock" target="_blank">open bug bounty</a> since 16 September, it hasn't been professionally audited. While no serious issues have been found by the numerous people who have combed over it, there still remains a possibility (however small) that there's an unfound bug.</p></div>
+        -->
+
+        <div id="rockform" class="form-group">
+            <textarea class="form-control" rows="1" id="rockid" placeholder="Enter a rock ID from 0 to 99" style="overflow:auto" onFocus="disablePaste()" maxlength="2"></textarea>
+        </div>
+
+        <div id="textarea_feedback"></div>
+
+        <div id="updatebuttondiv"></div>
+
+        <div id="iframediv"></div>
+
+        <div id="wraprockdiv"></div>
+
+        <center><div id="spinner"></div></center>
+        
+
+    </div>
+
+</div>
+
+<script src="../particles.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
